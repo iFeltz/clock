@@ -6,7 +6,7 @@ function Clock() {
   let SEC_INTERVAL, SYNC_INTERVAL
   let clock_element, date_element, analog_element, analog_hours,
     arrow_sec, arrow_min, arrow_hrs;
-    
+
   let time_url = 'http://worldtimeapi.org/api/ip'
   let date = null
   let time = null
@@ -27,11 +27,7 @@ function Clock() {
       clock_element.innerHTML = time;
       date_element.innerHTML = dateString;
 
-      dateString = date.toLocaleString('ru', { day: '2-digit', month: 'long', year: 'numeric' }).split('');
-      dateString.splice(-3, 3);
-      dateString = dateString.join('');
       document.getElementById("clock").style.display = "flex"
-
       setIntervals();
     })
 
