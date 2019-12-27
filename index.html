@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Clock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="clock" id="clock">
+    <div class="clock-analog" id="clock-analog">
+      <div class="clock-analog__hour clock-analog_12"><span>12</span></div>
+      <div class="clock-analog__hour clock-analog_1"><span>1</span></div>
+      <div class="clock-analog__hour clock-analog_2"><span>2</span></div>
+      <div class="clock-analog__hour clock-analog_3"><span>3</span></div>
+      <div class="clock-analog__hour clock-analog_4"><span>4</span></div>
+      <div class="clock-analog__hour clock-analog_5"><span>5</span></div>
+      <div class="clock-analog__hour clock-analog_6"><span>6</span></div>
+      <div class="clock-analog__hour clock-analog_7"><span>7</span></div>
+      <div class="clock-analog__hour clock-analog_8"><span>8</span></div>
+      <div class="clock-analog__hour clock-analog_9"><span>9</span></div>
+      <div class="clock-analog__hour clock-analog_10"><span>10</span></div>
+      <div class="clock-analog__hour clock-analog_11"><span>11</span></div>
+
+      <div id="arrow__sec"></div>
+      <div id="arrow__min"></div>
+      <div id="arrow__hrs"></div>
+    </div>
+    <div class="clock__value" id="clock__value"></div>
+    <div class="clock__date" id="clock__date"></div>
+    <div class="clock-timezone">
+      <div class="clock__changer" id="clock__changer">Show <span id="clock__changer-value">24h</span></div>
+      <select class="clock__timezones" name="cities" id="clock__timezones">
+        <option value="http://worldtimeapi.org/api/ip">Моя локация</option>
+        <option value="http://worldtimeapi.org/api/timezone/America/New_York">Нью-Йорк</option>
+        <option value="http://worldtimeapi.org/api/timezone/Europe/London">Лондон</option>
+        <option value="http://worldtimeapi.org/api/timezone/Asia/Tokyo">Токио</option>
+      </select>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
