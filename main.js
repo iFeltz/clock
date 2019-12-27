@@ -164,4 +164,4 @@ function Clock() {
   }
 }
 
-window.onload = new Clock().init;
+window.onload = new Clock().init();
