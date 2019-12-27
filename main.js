@@ -6,6 +6,7 @@ function Clock() {
   let SEC_INTERVAL, SYNC_INTERVAL
   let clock_element, date_element, analog_element, analog_hours,
     arrow_sec, arrow_min, arrow_hrs;
+    
   let time_url = 'http://worldtimeapi.org/api/ip'
   let date = null
   let time = null
@@ -22,7 +23,6 @@ function Clock() {
 
       date = new Date(JSON.parse(res).unixtime * 1000);
 
-      console.log();
       updateTime();
       clock_element.innerHTML = time;
       date_element.innerHTML = dateString;
@@ -54,12 +54,11 @@ function Clock() {
     let angle_min = -90 + 6 * Number(minutes);
     let angle_hrs = -90 + 30 * (Number(hours) % 12) + Number(minutes) / 2;
 
-    console.log(angle_sec);
-
     arrow_sec.style.transform = `rotate(${angle_sec}deg)`;
     arrow_min.style.transform = `rotate(${angle_min}deg)`;
     arrow_hrs.style.transform = `rotate(${angle_hrs}deg)`;
 
+    /************************/
 
     if (is12HoursType) {
       let postfix = hours > 12 ? 'p.m.' : 'a.m.';
@@ -69,6 +68,7 @@ function Clock() {
 
     time = `${hours}:${minutes}:${seconds}`;
     dateString = date.toLocaleString('ru', { day: '2-digit', month: 'long', year: 'numeric' }).split('');
+    // вырезаем последние 3 символа ' г.'
     dateString.splice(-3, 3);
     dateString = dateString.join('');
   }
