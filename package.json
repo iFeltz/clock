@@ -1,0 +1,16 @@
+{
+  "name": "clock",
+  "version": "1.0.0",
+  "main": "main.js",
+  "repository": "https://github.com/iFeltz/clock.git",
+  "author": "iFeltz <feltstedi@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src -d assets/js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.7.7"
+  }
+}

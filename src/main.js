@@ -1,7 +1,6 @@
 function Clock() {
   const TIME_UPDATE_INTERVAL = 1000
   const TIME_SYNC_INTERVAL = 60000
-  const self = this
 
   let SEC_INTERVAL, SYNC_INTERVAL
   let clock_element, date_element, analog_element, analog_hours,
@@ -10,6 +9,7 @@ function Clock() {
   let time_url = 'http://worldtimeapi.org/api/ip'
   let date = null
   let time = null
+  let dateString = null
   let is12HoursType = true
 
   const init = () => {
